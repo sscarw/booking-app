@@ -18,6 +18,19 @@
             </div>
         @endif
 
+        <!-- Validation Errors -->
+        @if ($errors->any())
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <strong>Validation Errors:</strong>
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        @endif
+
         <!-- Add Barber Section -->
         <h2 class="text-primary mb-3">Add Barber</h2>
         <div class="card border-0 shadow-sm p-4 mb-4">
